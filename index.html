@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mehedi Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="image/coollogo_com-6056948.png" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Web Developer</p>
+                <h1>Hi, I'm <span>Mehedi</span><br>Hasan From Bangladesh </h1>
+            </div>
+        </div>
+    </div>
+    <!--------------------------------About------------------------------------>
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="image/IMG_2875.JPG" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I want a successful career in the vast range of Computer programing sectors. I believe that I can use my
+                        technical ability with my managerial proficiency to help myself and my workplace to reach the highest
+                        pick of success. My sole objective is to give my best performance regardless of the circumstance. With
+                        much interest in this field, I have the confidence to work attentively and responsively in your Workplace.
+                        I would like to work honestly and punctually by using and contributing by experience for the growth of
+                        local & global development.</p>
+                        <div class="tab-titles ">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>UI/UX</span><br>Designe for front end</li>
+                                <li><span>Web Developer</span><br>Designe for front end</li>
+                                <li><span>Back-End Developer</span><br>Designe for front end</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>2021-2022</span><br>Internship at Nano Information Tecknology</li>
+                                <li><span>2020-2021</span><br>Junior Front-End Developer at 6Sence Company</li>
+                                <li><span>2018-2020</span><br>Learned Fornt-End from 6Sence Company</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>2018-2022</span><br>Designe for front end</li>
+                                <li><span>2016-2017</span><br>Designe for front end</li>
+                                <li><span>2015-2016</span><br>Designe for front end</li>
+                            </ul>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks)
+            {
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents)
+            {
+                tabcontent.classList.remove("active-tab"); 
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementsById(tabname).classList.add("active-tab");
+        }
+    </script>
+</body>
+</html>
